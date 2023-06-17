@@ -4,6 +4,10 @@ import Home from './components/Home'
 import Listas from './components/Listas'
 import Navbar from './components/Navbar'
 import Rickandmorty from './components/Rickandmorty'
+import Formulario from './components/Formulario'
+import Repaso from './components/Repaso'
+import Repaso2 from './components/Repaso2'
+import Asincrono from './components/Asincrono'
 
 const App = () => {
 
@@ -42,8 +46,11 @@ useEffect(() => {
       {/* <Navbar/> */}
       {/* <Home Autos={Autos}  nombre={nombre} setAppClicked ={()=>setAppClicked(state=>!state)}/> */}
       {/* <Rickandmorty/> */}
-      {/* <Listas/> */}
-      <Formulario2/>
+      <Listas/>
+      {/* <Formulario/> */}
+      {/* <Repaso/> */}
+      {/* <Repaso2/> */}
+      {/* <Asincrono/> */}
 
     </div>
   )

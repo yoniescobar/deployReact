@@ -182,21 +182,35 @@ const Formulario = () => {
       
           <div className='container py-5'>
             <h1>Lista de personas</h1>
-            <ul className='list-group'>
-              {
-                lista.length === 0 ? (
-                  <li className='list-group-item'>No hay personas registradas.</li>
-                ) : (
-                  lista.map(persona => ( 
-                    <li className='list-group-item' key={persona.codigo}>
-                      {persona.codigo}--{persona.nombre} - {persona.apellido} - {persona.edad} - {persona.correo} 
-                      <button className='btn btn-danger' onClick={() => { eliminar(persona.codigo) }}>Eliminar</button> {''}
-                      <button className='btn btn-warning' onClick={()=>{editar(persona)}}>Editar</button>
-                    </li>
+            <table className='table'>
+              <thead className='thead-dark'>
+                <tr>
+                  <th scope='col'>Codigo</th>
+                  <th scope='col'>Nombre</th>
+                  <th scope='col'>Apellido</th>
+                  <th scope='col'>Edad</th>
+                  <th scope='col'>Correo</th>
+                  <th scope='col'>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                {
+                  lista.map((persona)=>(
+                    <tr key={persona.codigo}>
+                      <td>{persona.codigo}</td>
+                      <td>{persona.nombre}</td>
+                      <td>{persona.apellido}</td>
+                      <td>{persona.edad}</td>
+                      <td>{persona.correo}</td>
+                      <td>
+                        <button className='btn btn-warning mx-3' onClick={()=>{editar(persona)}}>Editar</button>
+                        <button className='btn btn-danger ' onClick={()=>{eliminar(persona.codigo)}}>Eliminar</button>
+                      </td>
+                    </tr>
                   ))
-                )
-              }
-            </ul>
+                }
+              </tbody>
+            </table>
             </div>
         </div>
         )

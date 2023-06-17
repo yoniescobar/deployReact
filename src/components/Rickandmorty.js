@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
+
 
 //fetch: es una función que nos permite hacer peticiones a una API
 const Rickandmorty = () => {
@@ -17,6 +16,7 @@ const Rickandmorty = () => {
   }
 
   return (
+    <>
     <div className="container">
       <h1 className="text-primary">Yoni Edilzar Escobar Bautista</h1>
       <h2 className="text-danger"> Consumiendo una Api</h2>
@@ -50,6 +50,7 @@ const Rickandmorty = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 
